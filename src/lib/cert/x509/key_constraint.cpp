@@ -56,8 +56,7 @@ Key_Constraints find_constraints(const Public_Key& pub_key,
    if(name == "RSA" || name == "ElGamal")
       constraints |= KEY_ENCIPHERMENT | DATA_ENCIPHERMENT;
 
-   if(name == "RSA" || name == "RW" || name == "NR" ||
-      name == "DSA" || name == "ECDSA")
+   if(name == "RSA" || name == "DSA" || name == "ECDSA")
       constraints |= DIGITAL_SIGNATURE | NON_REPUDIATION;
 
    if(limits)
